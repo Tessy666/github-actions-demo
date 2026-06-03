@@ -1,0 +1,12 @@
+name: Self Hosted Demo
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: self-hosted
+
+    steps:
+      - name: Print Message
+        run: echo "Hello from Tessy's EC2"
