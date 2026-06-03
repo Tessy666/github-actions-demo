@@ -4,9 +4,18 @@ on:
   push:
 
 jobs:
+
   hello:
+
     runs-on: self-hosted
 
     steps:
-      - name: Print Message
-        run: echo "Hello from Tessy's EC2"
+
+      - name: Hostname
+        run: hostname
+
+      - name: Current User
+        run: whoami
+
+      - name: Present Directory
+        run: pwd
