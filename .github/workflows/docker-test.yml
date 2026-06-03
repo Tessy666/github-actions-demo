@@ -1,0 +1,20 @@
+name: Docker Build Test
+
+on:
+  push:
+
+jobs:
+  docker:
+
+    runs-on: self-hosted
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t tessy-nginx:v1 .
+
+      - name: Show Images
+        run: docker images
